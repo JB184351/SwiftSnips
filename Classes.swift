@@ -90,13 +90,10 @@ var filteredStudents = students.filter({$0.major == "Computer Science" || $0.maj
 // Printing the amount of students after filtering
 print(filteredStudents.count)
 
-// Sorting new list of filtered students by the gpa
-//var gpas = filteredStudents.sorted(by: { $0.gpa < $1.gpa })
-
 // Filtered out students that only have a gpa higher than 3.0
 filteredStudents = filteredStudents.filter({ $0.gpa > 3.0})
 
-// Printing out the students gpa in order of lowest to highest
+// Printing out the filtered list of students gpa that are greater than 3.0
 for filteredStudents in filteredStudents {
     print("\(filteredStudents.major) gpa: \(filteredStudents.gpa)")
 }
