@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Classes.swift
 //
 //
 //  Created by Justin Bengtson on 1/9/19.
@@ -11,15 +11,12 @@ class Student {
     
     var major = ""
     var gpa = 0.0
-    static var students = [Student]()
     
-    init(major: String, gpa: Float){
+    init(major: String, gpa: Double){
         self.major = major
         self.gpa = gpa
         
     }
-    
-    
     
 }
 // First Student
@@ -82,19 +79,27 @@ let kingKRool = Student(major: "Political Science", gpa: 2.2)
 // Twentieth Student
 let whitney = Student(major: "Professional Pokémon Trainer", gpa: 4.0)
 
-// Has each instance of the class in this array so we can compare and do stuff for later
 var students: [Student] = [student1, adam, shawn, kingKRool, paul, forest, foster, brett, madison, luffy, naruto, michael, ichigo, chandra, whitney, kathryn, jasmine, jenny, kenpachi, midoriya]
 
 // Filtering only those that are in Computer Science or Software Engineering
-var filteredStudents = students.filter({$0.major == "Computer Science" || $0.major == "Software Engineer"})
+var filteredStudents = students.filter({$0.major == "Computer Science" || $0.major == "Software Engineer" || $0.major == "Electrical Engineering" || $0.major == "Computer Engineering" || $0.major == "CS" || $0.major == "cs" || $0.major == "se" || $0.major == "SE"})
 
-// Printing the amount of students after filtering
-print(filteredStudents.count)
+print("Printing out only tech majors here")
+print("")
+
+// Printing out list of tech majors before filtering by gpa
+for filteredStudents in filteredStudents {
+    print("\(filteredStudents.major) gpa: \(filteredStudents.gpa)")
+}
+
+print("")
 
 // Filtered out students that only have a gpa higher than 3.0
 filteredStudents = filteredStudents.filter({ $0.gpa > 3.0})
 
-// Printing out the filtered list of students gpa that are greater than 3.0
+print("Printing out students who have a gpa higher than a 3.0\n")
+
+// Printing out the students gpa in order of lowest to highest
 for filteredStudents in filteredStudents {
     print("\(filteredStudents.major) gpa: \(filteredStudents.gpa)")
 }
