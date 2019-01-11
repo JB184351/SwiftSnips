@@ -13,7 +13,7 @@ class Student {
     var gpa = 0.0
     static var students = [Student]()
     
-    init(major: String, gpa: Double){
+    init(major: String, gpa: Float){
         self.major = major
         self.gpa = gpa
         
@@ -82,6 +82,7 @@ let kingKRool = Student(major: "Political Science", gpa: 2.2)
 // Twentieth Student
 let whitney = Student(major: "Professional Pokémon Trainer", gpa: 4.0)
 
+// Has each instance of the class in this array so we can compare and do stuff for later
 var students: [Student] = [student1, adam, shawn, kingKRool, paul, forest, foster, brett, madison, luffy, naruto, michael, ichigo, chandra, whitney, kathryn, jasmine, jenny, kenpachi, midoriya]
 
 // Filtering only those that are in Computer Science or Software Engineering
