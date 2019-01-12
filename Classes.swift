@@ -19,6 +19,7 @@ class Student {
     }
     
 }
+
 // First Student
 let student1 = Student(major: "Computer Science", gpa: 3.5)
 
